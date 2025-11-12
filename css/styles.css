@@ -7,6 +7,8 @@
         --azul: #79c9e2;
         --dark-azul: #58aee7;
         --pale-azul: #d5ebe8;
+
+        --acc-morado: #b379e0;
         /* FUENTES */
         --titulos: normal 400 2rem/100% 'Margarine', sans-serif;
         --parrafo: normal 400 1.25rem/100% 'Poppins', sans-serif;
@@ -20,7 +22,7 @@
 
     .este {
         border: 2px solid red;
-    }
+    } 
     .rel{
         position: relative;
     }
@@ -39,6 +41,30 @@
     .titulo{ font: var(--titulos);}
     .parrafo{ font: var(--parrafo);}
 
+    .cta{
+        border: 2px solid;
+        border-radius: 100px;
+        padding: .5rem 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all .5s ease ;
+    }
+    .cta.verde{
+        border-color: var(--verde);
+        background-color: var(--verde);
+        color: var(--blanco);
+    }
+    .cta.verde:hover{
+        border-color: var(--azul);
+        background-color: var(--azul);
+        color: var(--negro);
+    }
+
+    .cta.azul{
+        border-color: var(--azul);
+        background-color: var(--azul);
+        color: var(--blanco);
+    }
 
     /* HEADER */
     .header {
@@ -80,7 +106,7 @@
 
 
     /* FOOTER */
- footer {
+footer {
         background-color: var(--dark-azul);
         color: var(--blanco);
         padding: 40px 0;
@@ -158,5 +184,56 @@
 
 /*sobre la agenda*/
 .sobre{
-    min-height: 1000px;
+    position: relative;
+}
+
+.objetivo{
+    border-radius: 2rem;
+    padding: 1rem;
+    background-color: var(--azul);
+    transition: all .5s ease;
+}
+
+.objetivo:hover{
+    background-color: var(--acc-morado);
+    color: var(--blanco);
+    img{
+        scale: 120%;
+    }
+}
+
+.icono-objetivo{
+    border-radius: 100px;
+    background-color: var(--blanco);
+    min-width: 40px;
+    min-height: 40px;
+    img{
+        min-width: 100px;
+        height: auto;
+        transition: all .5s ease;
+    }
+}
+
+.titulo-objetivo{
+    font: var(--titulos);
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.cont-final{
+    height: 70px;
+    position: relative;
+    img{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}
+.separador{
+    height: 2px;
+}
+.contenedor-final>div{
+    background-color: var(--verde);
 }
