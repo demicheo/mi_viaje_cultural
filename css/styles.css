@@ -226,6 +226,24 @@ main {
 .hero-cont-fondo {
     position: absolute;
     z-index: 0;
+    inset: 0;
+    img {
+        position: absolute;
+        bottom: 0;
+    }
+}
+.separador{
+ min-height: 150px;
+}
+.color-verde{
+    height: 100px;
+    background-color: var(--pale-verde);
+    margin-top: -10px;
+}
+
+.img-cont-fondo {
+    position: absolute;
+    z-index: 0;
     top: 0;
     bottom: 0;
     left: -10px;
@@ -392,13 +410,51 @@ main {
 }
 .contenido-nosotras{
     /* border: 2px solid green; */
-    height: 140px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: start;
+    justify-content: center;
+    padding: 1rem;
 }
 
+
+/*PLANTILLAS*/
+.plantillas{
+    padding: 2rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    background-color: var(--acc-amarillo);
+
+    img{
+        height: auto;
+        width: 100%;
+        transform-origin: top;
+        transition: all .5s ease-in-out;
+    }
+}
+.cont-imagen-plantilla{
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.cont-imagen-plantilla:hover{
+    img{ scale: 110%;}
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-item img{
+    align-self: center;
+}
+
+.carousel-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
 
 /*************************************************************************** 
                                     mediaquery 
@@ -418,5 +474,13 @@ main {
 
 /* Extra large (xl) - ≥1200px */
 @media (min-width: 1200px) {
-    /* Tus estilos aquí */
+   .contenido-nosotras{
+    /* border: 2px solid green; */
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
 }
